@@ -58,5 +58,5 @@ def main():
     else:
         print("Invalid command, pick one of these three")
 
-if __name == "__main__":
+if __name__ == "__main__":
     main()
