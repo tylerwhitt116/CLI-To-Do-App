@@ -21,13 +21,15 @@ class TestTodoApp(unittest.TestCase):
 
     def test_add_task(self):
         add_task("Test Task")
-        tasks = self.load_tasks()
+        tasks = list_tasks()
+        self.assertIsNotNone(tasks, "tasks should not be None")
         self.assertIn("Test Task", tasks)
 
     def test_remove_task(self):
         add_task("Task to Remove")
         remove_task(1)
-        tasks = self.load_tasks()
+        tasks = list_tasks()
+        self.assertIsNotNone(tasks, "tasks should not be None")
         self.assertNotIn("Task to Remove", tasks)
 
 if __name__ == "__main__":
