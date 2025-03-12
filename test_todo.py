@@ -1,7 +1,7 @@
 import unittest
 import json
 import os
-from todo import add_task, list_tasks, remove_task, TODO_FILE
+from todo import add_task, list_tasks, remove_task
 
 class TestTodoApp(unittest.TestCase):
     def setUp(self):
